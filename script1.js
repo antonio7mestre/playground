@@ -1,4 +1,4 @@
-let map;
+let map; //this one works!
 let isRunning = false;
 let watchId;
 let userLocationMarker = null;
