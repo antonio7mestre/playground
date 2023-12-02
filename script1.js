@@ -1,4 +1,4 @@
-let map; //
+let map; // single time play test
 let isRunning = false;
 let watchId;
 let userLocationMarker = null;
