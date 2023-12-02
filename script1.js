@@ -1,4 +1,4 @@
-let map; // single time play test
+let map; // single time play test with brown noise
 let isRunning = false;
 let watchId;
 let userLocationMarker = null;
