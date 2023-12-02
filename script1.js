@@ -1,4 +1,4 @@
-let map; // single time play test with brown noise
+let map; //
 let isRunning = false;
 let watchId;
 let userLocationMarker = null;
@@ -24,7 +24,7 @@ const checkpoints = [
 
 document.getElementById("startButton").addEventListener("click", function() {
     // Play a silent sound to activate audio context on iOS
-    let silentAudio = new Audio('audio/audio0.mp3'); // this is not actually silent
+    let silentAudio = new Audio('audio/audio0.mp3'); // Make sure you have a silent.mp3 file at the specified path
     silentAudio.play().then(() => {
         console.log('Silent audio played successfully');
     }).catch((e) => {
@@ -116,7 +116,7 @@ function handleLocationUpdate(position) {
     const userLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 
     if (!isRunning) {
-        return;
+        return; // Do not update the map if the user has stopped the run
     }
 
     map.panTo(userLocation);
@@ -159,7 +159,10 @@ function handleLocationUpdate(position) {
         const checkpointLocation = new google.maps.LatLng(checkpoint.lat, checkpoint.lng);
         const distance = google.maps.geometry.spherical.computeDistanceBetween(userLocation, checkpointLocation);
         if (distance < checkpoint.radius) {
-            if (!checkpoint.audioPlayed) {
+            if(checkpoint.audioKey === "checkpointBig") {
+                // Let the silent audio loop continuously
+                // This one doesn't need the audioPlayed check
+            } else if (!checkpoint.audioPlayed) {
                 playAudio(checkpoint.audioKey);
                 checkpoint.audioPlayed = true; // Mark as played
             }
