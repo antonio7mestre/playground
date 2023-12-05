@@ -61,8 +61,17 @@ li {
         width: 100%; /* Full width for the map on smaller screens */
     }
 
+    .run-container {
+        flex-direction: column; /* Stack the .run elements vertically */
+    }
+
+    .run {
+        width: 100%; /* Each run takes full width of the screen */
+        margin: 0; /* Remove margin to use the full width */
+    }
+
     .run img {
-        width: 100%; /* Full width on smaller screens */
+        width: 100%; /* Full width for images on smaller screens */
         height: auto; /* Adjust height automatically */
     }
 }
