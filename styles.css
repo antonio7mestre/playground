@@ -16,6 +16,34 @@ button {
     cursor: pointer;
 }
 
+/* Styles for the runs on the landing page */
+.run-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.run {
+    position: relative;
+    margin: 10px;
+}
+
+.run img {
+    width: 300px; /* Adjust as needed */
+    height: 200px; /* Adjust as needed */
+    border-radius: 10px; /* Optional, for rounded corners */
+}
+
+.run-title {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #000000; /* To make text more readable */
+}
+
 ul {
     list-style-type: none;
     padding: 0;
