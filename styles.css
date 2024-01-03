@@ -19,27 +19,30 @@ button {
 /* Styles for the runs on the landing page */
 .run-container {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: column; /* Always stack the .run elements vertically */
+    align-items: center; /* Center the items */
+    width: 100%; /* Take full width of the container */
 }
 
 .run {
     position: relative;
-    margin: 10px;
+    width: 100%; /* Each run takes full width of the screen */
+    margin: 10px 0; /* Vertical margin only */
 }
 
 .run img {
-    width: 300px; /* Default width for larger screens */
-    height: 200px;
+    width: 100%; /* Images take full width */
+    height: auto; /* Height is automatic to maintain aspect ratio */
     border-radius: 10px;
 }
 
 .run-title {
     position: absolute;
     bottom: 10px;
-    left: 10px;
+    left: 50%;
+    transform: translateX(-50%); /* Center the title horizontally */
     color: white;
-    font-size: 20px;
+    font-size: 40px;
     font-weight: bold;
     text-shadow: 2px 2px 4px #000000;
 }
@@ -55,23 +58,4 @@ li {
     background-color: #f0f0f0;
 }
 
-/* Responsive design for mobile devices */
-@media (max-width: 600px) {
-    #map {
-        width: 100%; /* Full width for the map on smaller screens */
-    }
-
-    .run-container {
-        flex-direction: column; /* Stack the .run elements vertically */
-    }
-
-    .run {
-        width: 100%; /* Each run takes full width of the screen */
-        margin: 0; /* Remove margin to use the full width */
-    }
-
-    .run img {
-        width: 100%; /* Full width for images on smaller screens */
-        height: auto; /* Adjust height automatically */
-    }
-}
+/* The media query is no longer necessary since we're stacking the tiles on all screen sizes */
