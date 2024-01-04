@@ -1,6 +1,10 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
+    background-image: url('images/home-background.jpg'); /* Path to your background image */
+    background-size: cover; /* Cover the entire area */
+    background-attachment: fixed; /* Keep the image fixed during scrolling */
+    background-position: center; /* Center the image */
 }
 
 #map {
@@ -22,25 +26,28 @@ button {
     flex-direction: column; /* Always stack the .run elements vertically */
     align-items: center; /* Center the items */
     width: 100%; /* Take full width of the container */
+    padding: 20px; /* Padding around the container */
 }
 
 .run {
     position: relative;
-    width: 100%; /* Each run takes full width of the screen */
-    margin: 10px 0; /* Vertical margin only */
+    width: calc(100% - 40px); /* Adjust the width to account for padding */
+    margin: 20px 0; /* Margin only vertically */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); /* Drop shadow */
+    border-radius: 0px;
 }
 
 .run img {
     width: 100%; /* Images take full width */
     height: auto; /* Height is automatic to maintain aspect ratio */
-    border-radius: 10px;
+    border-radius: 10px; /* Keep the corners rounded */
 }
 
 .run-title {
     position: absolute;
-    bottom: 10px;
+    top: 50%; /* Align vertically at the center */
     left: 50%;
-    transform: translateX(-50%); /* Center the title horizontally */
+    transform: translate(-50%, -50%); /* Center both horizontally and vertically */
     color: white;
     font-size: 40px;
     font-weight: bold;
