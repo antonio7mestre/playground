@@ -1,48 +1,38 @@
-let map; //this one works! BUT audio loops like crazy 
+let map;
 let isRunning = false;
 let watchId;
 let userLocationMarker = null;
 let checkpointCircles = [];
 const audioFiles = {
-    "checkpoint1": "audio/audio1.mp3", // Replace with your actual audio file paths
+    "checkpoint1": "audio/audio1.mp3",
     "checkpoint2": "audio/audio2.mp3",
     "checkpoint3": "audio/audio3.mp3",
     "checkpoint4": "audio/audio4.mp3",
     "checkpoint5": "audio/audio5.mp3",
     "checkpoint6": "audio/audio6.mp3",
-    "checkpoint7": "audio/silent.mp3"
+    "checkpointBig": "audio/silent.mp3"
 };
+
+// Enhanced checkpoints array with additional properties
 const checkpoints = [
-    { lat: 37.763336882043006, lng: -122.43651886234369, radius: 15, audioKey: "checkpoint1" },
-    { lat: 37.76339860797157, lng: -122.43540269829911, radius: 15, audioKey: "checkpoint2" },
-    { lat: 37.762861774514526, lng: -122.43536210380068, radius: 15, audioKey: "checkpoint3" },
-    { lat: 37.76263420233611, lng: -122.43496352624764, radius: 15, audioKey: "checkpoint4" },
-    { lat: 37.76292229218876, lng: -122.43448647025788, radius: 15, audioKey: "checkpoint5" },
-    { lat: 37.76349055985091, lng: -122.43374489854205, radius: 15, audioKey: "checkpoint6" },
-    { lat: 37.76278785560075, lng: -122.43507155436443, radius: 500, audioKey: "checkpoint7" }
+    { lat: 37.763158753593004, lng: -122.43700119937125, radius: 2, audioKey: "checkpoint1", audioPlayed: false },
+    { lat: 37.76321547479275, lng: -122.43704009133143, radius: 2, audioKey: "checkpoint2", audioPlayed: false },
+    { lat: 37.763295520569066, lng: -122.43706423115326, radius: 2, audioKey: "checkpoint3", audioPlayed: false },
+    { lat: 37.76263420233611, lng: -122.43496352624764, radius: 15, audioKey: "checkpoint4", audioPlayed: false },
+    { lat: 37.76292229218876, lng: -122.43448647025788, radius: 15, audioKey: "checkpoint5", audioPlayed: false },
+    { lat: 37.76349055985091, lng: -122.43374489854205, radius: 15, audioKey: "checkpoint6", audioPlayed: false },
+    { lat: 37.76278785560075, lng: -122.43507155436443, radius: 900, audioKey: "checkpointBig"}
 ];
 
-
-
 document.getElementById("startButton").addEventListener("click", function() {
-    // Play a silent sound to activate audio context on iOS
-    let silentAudio = new Audio('audio/audio0.mp3'); // Make sure you have a silent.mp3 file at the specified path
-    silentAudio.play().then(() => {
-        console.log('Silent audio played successfully');
-    }).catch((e) => {
-        console.error('Error playing silent audio', e);
-    });
-
-    // Now start the run as usual
     console.log("Run started");
     isRunning = true;
+    resetCheckpointFlags(); // Reset checkpoint flags before starting
     this.style.display = 'none';
     document.getElementById("stopButton").style.display = 'block';
     document.getElementById("status").innerText = "Status: Running...";
     startLocationTracking();
-    drawCheckpointCircles(); // This will draw the checkpoint circles when the run starts
-
-    // Any other code you have for starting the run...
+    drawCheckpointCircles();
 });
 
 document.getElementById("stopButton").addEventListener("click", function() {
@@ -82,7 +72,7 @@ function stopLocationTracking() {
 }
 
 function drawCheckpointCircles() {
-    checkpoints.forEach((checkpoint, index) => {
+    checkpoints.forEach((checkpoint) => {
         const checkpointLocation = new google.maps.LatLng(checkpoint.lat, checkpoint.lng);
         const checkpointCircle = new google.maps.Circle({
             strokeColor: '#FF0000',
@@ -99,10 +89,9 @@ function drawCheckpointCircles() {
     });
 }
 
-// Function to clear checkpoint circles
 function clearCheckpointCircles() {
     checkpointCircles.forEach(circle => circle.setMap(null));
-    checkpointCircles = []; // Reset the array
+    checkpointCircles = [];
 }
 
 function handleLocationUpdate(position) {
@@ -113,48 +102,47 @@ function handleLocationUpdate(position) {
     }
 
     map.panTo(userLocation);
+    updateLocationMarker(userLocation);
+    checkCheckpointProximity(userLocation);
+}
 
+function updateLocationMarker(userLocation) {
     if (!userLocationMarker) {
-        userLocationMarker = new google.maps.Marker({
-            position: userLocation,
-            map: map,
-            icon: {
-                path: google.maps.SymbolPath.CIRCLE,
-                scale: 6, // Original size of the marker
-                fillColor: '#1E90FF',
-                fillOpacity: 1,
-                strokeColor: '#fff',
-                strokeWeight: 2,
-            },
-        });
-
-        // Add a pulsating effect
-        let scaleFactor = 0;
-        setInterval(() => {
-            const scale = 6 + scaleFactor;
-            userLocationMarker.setIcon({
-                path: google.maps.SymbolPath.CIRCLE,
-                scale: scale,
-                fillColor: '#1E90FF',
-                fillOpacity: 1,
-                strokeColor: '#fff',
-                strokeWeight: 2,
-            });
-
-            // Change the factor to grow or shrink the circle size
-            scaleFactor = (scaleFactor + 0.1) % 2;
-        }, 150);
+        userLocationMarker = createLocationMarker(userLocation);
     } else {
         userLocationMarker.setPosition(userLocation);
     }
+}
 
+function createLocationMarker(userLocation) {
+    return new google.maps.Marker({
+        position: userLocation,
+        map: map,
+        icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            scale: 6,
+            fillColor: '#1E90FF',
+            fillOpacity: 1,
+            strokeColor: '#fff',
+            strokeWeight: 2,
+        },
+    });
+}
+
+function checkCheckpointProximity(userLocation) {
     checkpoints.forEach(checkpoint => {
         const checkpointLocation = new google.maps.LatLng(checkpoint.lat, checkpoint.lng);
         const distance = google.maps.geometry.spherical.computeDistanceBetween(userLocation, checkpointLocation);
-        if (distance < checkpoint.radius) {
+
+        if (distance < checkpoint.radius && !checkpoint.audioPlayed) {
             playAudio(checkpoint.audioKey);
+            checkpoint.audioPlayed = true; // Mark as played
         }
     });
+}
+
+function resetCheckpointFlags() {
+    checkpoints.forEach(checkpoint => checkpoint.audioPlayed = false);
 }
 
 function handleError(error) {
@@ -174,39 +162,10 @@ function handleError(error) {
             break;
     }
     console.warn(`ERROR(${error.code}): ${errorMessage}`);
-    alert(errorMessage); // Optionally alert the user
+    alert(errorMessage);
 }
-
 
 function playAudio(audioKey) {
     const audio = new Audio(audioFiles[audioKey]);
     audio.play();
-}
-
-function drawCheckpointCircles() {
-    // Clear existing circles first
-    clearCheckpointCircles();
-
-    checkpoints.forEach((checkpoint) => {
-        const checkpointLocation = new google.maps.LatLng(checkpoint.lat, checkpoint.lng);
-        const checkpointCircle = new google.maps.Circle({
-            strokeColor: '#FF0000',
-            strokeOpacity: 0.8,
-            strokeWeight: 2,
-            fillColor: '#FF0000',
-            fillOpacity: 0.35,
-            map: map,
-            center: checkpointLocation,
-            radius: checkpoint.radius
-        });
-
-        checkpointCircles.push(checkpointCircle);
-    });
-}
-
-function clearCheckpointCircles() {
-    checkpointCircles.forEach((circle) => {
-        circle.setMap(null);
-    });
-    checkpointCircles = [];
 }
