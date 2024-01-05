@@ -15,9 +15,9 @@ const audioFiles = {
 
 // Enhanced checkpoints array with additional properties
 const checkpoints = [
-    { lat: 37.763158753593004, lng: -122.43700119937125, radius: 2, audioKey: "checkpoint1", audioPlayed: false },
-    { lat: 37.76321547479275, lng: -122.43704009133143, radius: 2, audioKey: "checkpoint2", audioPlayed: false },
-    { lat: 37.763295520569066, lng: -122.43706423115326, radius: 2, audioKey: "checkpoint3", audioPlayed: false },
+    { lat: 37.76316299435721, lng: -122.4369475551761, radius: 2, audioKey: "checkpoint1", audioPlayed: false },
+    { lat: 37.763229787518874, lng: -122.43695493109114, radius: 2, audioKey: "checkpoint2", audioPlayed: false },
+    { lat: 37.76329764090802, lng: -122.43697236531409, radius: 2, audioKey: "checkpoint3", audioPlayed: false },
     { lat: 37.76263420233611, lng: -122.43496352624764, radius: 15, audioKey: "checkpoint4", audioPlayed: false },
     { lat: 37.76292229218876, lng: -122.43448647025788, radius: 15, audioKey: "checkpoint5", audioPlayed: false },
     { lat: 37.76349055985091, lng: -122.43374489854205, radius: 15, audioKey: "checkpoint6", audioPlayed: false },
