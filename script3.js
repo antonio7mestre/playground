@@ -1,4 +1,4 @@
-let map; //this one works! BUT audio loops like crazy 
+let map; //this one works! BUT audio loops like crazy help
 let isRunning = false;
 let watchId;
 let userLocationMarker = null;
