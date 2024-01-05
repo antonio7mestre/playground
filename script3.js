@@ -13,15 +13,14 @@ const audioFiles = {
     "checkpoint7": "audio/silent.mp3"
 };
 const checkpoints = [
-    { lat: 37.76119955169599, lng: -122.42808196246752, radius: 15, audioKey: "checkpoint1" },
-    { lat: 37.760551738444015, lng: -122.42775051084388, radius: 15, audioKey: "checkpoint2" },
-    { lat: 37.759925756204, lng: -122.42684822586841, radius: 15, audioKey: "checkpoint3" },
-    { lat: 37.75980201490159, lng: -122.42762161299024, radius: 15, audioKey: "checkpoint4" },
-    { lat: 37.7591250735247, lng: -122.4277781318125, radius: 15, audioKey: "checkpoint5" },
-    { lat: 37.7583171031269, lng: -122.4277781318125, radius: 15, audioKey: "checkpoint6" },
-    { lat: 37.759889361724774, lng: -122.42705998662795, radius: 300, audioKey: "checkpoint7" }
+    { lat: 37.76316299435721, lng: -122.4369475551761, radius: 2, audioKey: "checkpoint1"},
+    { lat: 37.763229787518874, lng: -122.43695493109114, radius: 2, audioKey: "checkpoint2"},
+    { lat: 37.76329764090802, lng: -122.43697236531409, radius: 2, audioKey: "checkpoint3"},
+    { lat: 38.891828469221075, lng: -77.09312395428827, radius: 15, audioKey: "checkpoint4" },
+    { lat: 38.89112581426466, lng: -77.09258153669099, radius: 15, audioKey: "checkpoint5" },
+    { lat: 38.89017217737917, lng:  -77.09202687325174, radius: 15, audioKey: "checkpoint6" },
+    { lat: 37.76321879666942, lng: -122.43708068946079, radius: 200, audioKey: "checkpoint7" }
 ];
-
 
 document.getElementById("startButton").addEventListener("click", function() {
     // Play a silent sound to activate audio context on iOS
