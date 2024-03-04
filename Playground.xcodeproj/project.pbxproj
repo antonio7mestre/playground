@@ -9,13 +9,38 @@
 /* Begin PBXBuildFile section */
 		0B97BAE42B72C447002ABE27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B97BAE32B72C447002ABE27 /* AppDelegate.swift */; };
 		0B97BAE62B72C447002ABE27 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B97BAE52B72C447002ABE27 /* SceneDelegate.swift */; };
-		0B97BAE82B72C447002ABE27 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B97BAE72B72C447002ABE27 /* ViewController.swift */; };
 		0B97BAEB2B72C447002ABE27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B97BAE92B72C447002ABE27 /* Main.storyboard */; };
 		0B97BAED2B72C449002ABE27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B97BAEC2B72C449002ABE27 /* Assets.xcassets */; };
 		0B97BAF02B72C449002ABE27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B97BAEE2B72C449002ABE27 /* LaunchScreen.storyboard */; };
 		0B97BAFB2B72C449002ABE27 /* PlaygroundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B97BAFA2B72C449002ABE27 /* PlaygroundTests.swift */; };
 		0B97BB052B72C449002ABE27 /* PlaygroundUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B97BB042B72C449002ABE27 /* PlaygroundUITests.swift */; };
 		0B97BB072B72C449002ABE27 /* PlaygroundUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B97BB062B72C449002ABE27 /* PlaygroundUITestsLaunchTests.swift */; };
+		0B97BB142B72C599002ABE27 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B97BB132B72C598002ABE27 /* GoogleService-Info.plist */; };
+		0B97BB152B72C599002ABE27 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B97BB132B72C598002ABE27 /* GoogleService-Info.plist */; };
+		0B97BB162B72C599002ABE27 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B97BB132B72C598002ABE27 /* GoogleService-Info.plist */; };
+		0B97BB212B72CDA8002ABE27 /* Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B97BB202B72CDA8002ABE27 /* Run.swift */; };
+		0B97BB222B72CDA8002ABE27 /* Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B97BB202B72CDA8002ABE27 /* Run.swift */; };
+		0B97BB232B72CDA8002ABE27 /* Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B97BB202B72CDA8002ABE27 /* Run.swift */; };
+		0B97BB252B72CDC4002ABE27 /* Checkpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B97BB242B72CDC4002ABE27 /* Checkpoint.swift */; };
+		0B97BB262B72CDC4002ABE27 /* Checkpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B97BB242B72CDC4002ABE27 /* Checkpoint.swift */; };
+		0B97BB272B72CDC4002ABE27 /* Checkpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B97BB242B72CDC4002ABE27 /* Checkpoint.swift */; };
+		0B97BB292B72D244002ABE27 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B97BB282B72D244002ABE27 /* LocationManager.swift */; };
+		0B97BB2A2B72D244002ABE27 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B97BB282B72D244002ABE27 /* LocationManager.swift */; };
+		0B97BB2B2B72D244002ABE27 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B97BB282B72D244002ABE27 /* LocationManager.swift */; };
+		0B97BB2D2B72EAFF002ABE27 /* AudioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B97BB2C2B72EAFF002ABE27 /* AudioService.swift */; };
+		0B97BB2E2B72EAFF002ABE27 /* AudioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B97BB2C2B72EAFF002ABE27 /* AudioService.swift */; };
+		0B97BB2F2B72EAFF002ABE27 /* AudioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B97BB2C2B72EAFF002ABE27 /* AudioService.swift */; };
+		0B97BB352B72FC80002ABE27 /* RunListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B97BB342B72FC80002ABE27 /* RunListViewController.swift */; };
+		0B97BB362B72FC80002ABE27 /* RunListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B97BB342B72FC80002ABE27 /* RunListViewController.swift */; };
+		0B97BB372B72FC80002ABE27 /* RunListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B97BB342B72FC80002ABE27 /* RunListViewController.swift */; };
+		0B97BB392B72FC9F002ABE27 /* RunDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B97BB382B72FC9F002ABE27 /* RunDetailViewController.swift */; };
+		0B97BB3A2B72FC9F002ABE27 /* RunDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B97BB382B72FC9F002ABE27 /* RunDetailViewController.swift */; };
+		0B97BB3B2B72FC9F002ABE27 /* RunDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B97BB382B72FC9F002ABE27 /* RunDetailViewController.swift */; };
+		0B97BB3E2B7312AF002ABE27 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 0B97BB3D2B7312AF002ABE27 /* FirebaseAnalytics */; };
+		0B97BB402B7312AF002ABE27 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 0B97BB3F2B7312AF002ABE27 /* FirebaseAuth */; };
+		0B97BB422B7312AF002ABE27 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 0B97BB412B7312AF002ABE27 /* FirebaseFirestore */; };
+		0B97BB442B7312B0002ABE27 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0B97BB432B7312B0002ABE27 /* FirebaseFirestoreSwift */; };
+		0B97BB462B7312B0002ABE27 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 0B97BB452B7312B0002ABE27 /* FirebaseStorage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +64,6 @@
 		0B97BAE02B72C447002ABE27 /* Playground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Playground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B97BAE32B72C447002ABE27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B97BAE52B72C447002ABE27 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0B97BAE72B72C447002ABE27 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0B97BAEA2B72C447002ABE27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0B97BAEC2B72C449002ABE27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B97BAEF2B72C449002ABE27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +73,13 @@
 		0B97BB002B72C449002ABE27 /* PlaygroundUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlaygroundUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B97BB042B72C449002ABE27 /* PlaygroundUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaygroundUITests.swift; sourceTree = "<group>"; };
 		0B97BB062B72C449002ABE27 /* PlaygroundUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaygroundUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0B97BB132B72C598002ABE27 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0B97BB202B72CDA8002ABE27 /* Run.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Run.swift; sourceTree = "<group>"; };
+		0B97BB242B72CDC4002ABE27 /* Checkpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkpoint.swift; sourceTree = "<group>"; };
+		0B97BB282B72D244002ABE27 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		0B97BB2C2B72EAFF002ABE27 /* AudioService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioService.swift; sourceTree = "<group>"; };
+		0B97BB342B72FC80002ABE27 /* RunListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunListViewController.swift; sourceTree = "<group>"; };
+		0B97BB382B72FC9F002ABE27 /* RunDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +87,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B97BB3E2B7312AF002ABE27 /* FirebaseAnalytics in Frameworks */,
+				0B97BB402B7312AF002ABE27 /* FirebaseAuth in Frameworks */,
+				0B97BB422B7312AF002ABE27 /* FirebaseFirestore in Frameworks */,
+				0B97BB462B7312B0002ABE27 /* FirebaseStorage in Frameworks */,
+				0B97BB442B7312B0002ABE27 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,11 +137,17 @@
 			children = (
 				0B97BAE32B72C447002ABE27 /* AppDelegate.swift */,
 				0B97BAE52B72C447002ABE27 /* SceneDelegate.swift */,
-				0B97BAE72B72C447002ABE27 /* ViewController.swift */,
 				0B97BAE92B72C447002ABE27 /* Main.storyboard */,
 				0B97BAEC2B72C449002ABE27 /* Assets.xcassets */,
 				0B97BAEE2B72C449002ABE27 /* LaunchScreen.storyboard */,
 				0B97BAF12B72C449002ABE27 /* Info.plist */,
+				0B97BB132B72C598002ABE27 /* GoogleService-Info.plist */,
+				0B97BB202B72CDA8002ABE27 /* Run.swift */,
+				0B97BB242B72CDC4002ABE27 /* Checkpoint.swift */,
+				0B97BB282B72D244002ABE27 /* LocationManager.swift */,
+				0B97BB2C2B72EAFF002ABE27 /* AudioService.swift */,
+				0B97BB342B72FC80002ABE27 /* RunListViewController.swift */,
+				0B97BB382B72FC9F002ABE27 /* RunDetailViewController.swift */,
 			);
 			path = Playground;
 			sourceTree = "<group>";
@@ -143,6 +185,13 @@
 			dependencies = (
 			);
 			name = Playground;
+			packageProductDependencies = (
+				0B97BB3D2B7312AF002ABE27 /* FirebaseAnalytics */,
+				0B97BB3F2B7312AF002ABE27 /* FirebaseAuth */,
+				0B97BB412B7312AF002ABE27 /* FirebaseFirestore */,
+				0B97BB432B7312B0002ABE27 /* FirebaseFirestoreSwift */,
+				0B97BB452B7312B0002ABE27 /* FirebaseStorage */,
+			);
 			productName = Playground;
 			productReference = 0B97BAE02B72C447002ABE27 /* Playground.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +264,9 @@
 				Base,
 			);
 			mainGroup = 0B97BAD72B72C447002ABE27;
+			packageReferences = (
+				0B97BB3C2B7312AF002ABE27 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 0B97BAE12B72C447002ABE27 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -232,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B97BAF02B72C449002ABE27 /* LaunchScreen.storyboard in Resources */,
+				0B97BB142B72C599002ABE27 /* GoogleService-Info.plist in Resources */,
 				0B97BAED2B72C449002ABE27 /* Assets.xcassets in Resources */,
 				0B97BAEB2B72C447002ABE27 /* Main.storyboard in Resources */,
 			);
@@ -241,6 +294,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B97BB152B72C599002ABE27 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +302,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B97BB162B72C599002ABE27 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,8 +313,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B97BAE82B72C447002ABE27 /* ViewController.swift in Sources */,
+				0B97BB392B72FC9F002ABE27 /* RunDetailViewController.swift in Sources */,
+				0B97BB252B72CDC4002ABE27 /* Checkpoint.swift in Sources */,
+				0B97BB292B72D244002ABE27 /* LocationManager.swift in Sources */,
+				0B97BB212B72CDA8002ABE27 /* Run.swift in Sources */,
 				0B97BAE42B72C447002ABE27 /* AppDelegate.swift in Sources */,
+				0B97BB2D2B72EAFF002ABE27 /* AudioService.swift in Sources */,
+				0B97BB352B72FC80002ABE27 /* RunListViewController.swift in Sources */,
 				0B97BAE62B72C447002ABE27 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,7 +328,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B97BB362B72FC80002ABE27 /* RunListViewController.swift in Sources */,
+				0B97BB3A2B72FC9F002ABE27 /* RunDetailViewController.swift in Sources */,
+				0B97BB2E2B72EAFF002ABE27 /* AudioService.swift in Sources */,
+				0B97BB2A2B72D244002ABE27 /* LocationManager.swift in Sources */,
 				0B97BAFB2B72C449002ABE27 /* PlaygroundTests.swift in Sources */,
+				0B97BB222B72CDA8002ABE27 /* Run.swift in Sources */,
+				0B97BB262B72CDC4002ABE27 /* Checkpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +343,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B97BB052B72C449002ABE27 /* PlaygroundUITests.swift in Sources */,
+				0B97BB232B72CDA8002ABE27 /* Run.swift in Sources */,
+				0B97BB2F2B72EAFF002ABE27 /* AudioService.swift in Sources */,
+				0B97BB2B2B72D244002ABE27 /* LocationManager.swift in Sources */,
 				0B97BB072B72C449002ABE27 /* PlaygroundUITestsLaunchTests.swift in Sources */,
+				0B97BB272B72CDC4002ABE27 /* Checkpoint.swift in Sources */,
+				0B97BB372B72FC80002ABE27 /* RunListViewController.swift in Sources */,
+				0B97BB3B2B72FC9F002ABE27 /* RunDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,8 +509,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SL3P34N8QF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Playground/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We use location to trak your Routes";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We use location to trak your Routes";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We use location to trak your Routes";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -449,7 +525,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Me.Playground;
+				PRODUCT_BUNDLE_IDENTIFIER = "Me.Playground-Runs";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -464,8 +540,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SL3P34N8QF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Playground/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We use location to trak your Routes";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "We use location to trak your Routes";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We use location to trak your Routes";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -476,7 +556,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Me.Playground;
+				PRODUCT_BUNDLE_IDENTIFIER = "Me.Playground-Runs";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -596,6 +676,45 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0B97BB3C2B7312AF002ABE27 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0B97BB3D2B7312AF002ABE27 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0B97BB3C2B7312AF002ABE27 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		0B97BB3F2B7312AF002ABE27 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0B97BB3C2B7312AF002ABE27 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		0B97BB412B7312AF002ABE27 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0B97BB3C2B7312AF002ABE27 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		0B97BB432B7312B0002ABE27 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0B97BB3C2B7312AF002ABE27 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		0B97BB452B7312B0002ABE27 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0B97BB3C2B7312AF002ABE27 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0B97BAD82B72C447002ABE27 /* Project object */;
 }
