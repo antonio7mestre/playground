@@ -63,6 +63,26 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
         delegate?.didUpdateMonitoredCheckpoints()
     }
 
+    
+    func isUserInFirstCheckpoint() -> Bool {
+            guard let firstCheckpoint = checkpoints.first,
+                  let userLocation = locationManager.location else { return false }
+
+            let checkpointRegion = CLCircularRegion(center: CLLocationCoordinate2D(latitude: firstCheckpoint.latitude, longitude: firstCheckpoint.longitude), radius: firstCheckpoint.radius, identifier: firstCheckpoint.id ?? UUID().uuidString)
+
+            return checkpointRegion.contains(userLocation.coordinate)
+        }
+
+        func triggerFirstCheckpointLogic() {
+            guard let firstCheckpoint = checkpoints.first else { return }
+
+            playAudioForCheckpoint(firstCheckpoint)
+
+            // Increment the lastCheckpointIndex to skip the first checkpoint since it's already completed.
+            lastCheckpointIndex = 1
+            updateGeofences()
+        }
+    
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
         guard let checkpointRegion = region as? CLCircularRegion,
               let checkpointIndex = checkpoints.firstIndex(where: { $0.id == region.identifier }),
@@ -109,3 +129,4 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
         // Implement if you need to handle location updates
     }
 }
+
